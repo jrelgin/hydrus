@@ -83,11 +83,20 @@ add_action( 'widgets_init', 'hydrus_widgets_init' );
  * Enqueue scripts and styles
  */
 function hydrus_scripts() {
-	wp_enqueue_style( 'hydrus-style', get_stylesheet_uri() );
+
+	wp_enqueue_style( 'style', get_stylesheet_uri() );
+
+	wp_enqueue_style( 'hydrus-style', get_template_directory_uri() . '/inc/css/hydrus.css' );
+
+	wp_enqueue_style( 'bootstrap-style', get_template_directory_uri() . '/inc/css/bootstrap.min.css' );
 
 	wp_enqueue_script( 'hydrus-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'hydrus-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+
+	wp_enqueue_script( 'jQuery', get_template_directory_uri() . '/js/jquery.js', array(), '1.10.2', false );
+
+	wp_enqueue_script( 'BootstrapJS', get_template_directory_uri() . '/inc/js/bootstrap.min.js', array(), '3.0.1', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

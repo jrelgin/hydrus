@@ -8,3 +8,5 @@ Includes an awesome walker by [twittem](https://github.com/twittem/wp-bootstrap-
 Getting Started
 ---------------
 
+**Important Note:**
+This theme is not yet complete and should not be used in any way.

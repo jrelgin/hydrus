@@ -31,7 +31,14 @@
 			<h1 class="menu-toggle"><?php _e( 'Menu', 'hydrus' ); ?></h1>
 			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'hydrus' ); ?></a>
 
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+			<?php wp_nav_menu( array( 'theme_location' => 'primary'
+						                		'depth'             => 2,
+								                'container'         => 'div',
+								                'container_class'   => 'collapse navbar-collapse navbar-ex1-collapse',
+								                'menu_class'        => 'nav navbar-nav',
+								                'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+								                'walker'            =>  wp_bootstrap_navwalker())
+								                 ) ); ?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
