@@ -84,11 +84,9 @@ add_action( 'widgets_init', 'hydrus_widgets_init' );
  */
 function hydrus_scripts() {
 
-	wp_enqueue_style( 'style', get_stylesheet_uri() );
+	wp_enqueue_style( 'bootstrap-style', get_template_directory_uri() . '/inc/css/bootstrap.min.css' );
 
 	wp_enqueue_style( 'hydrus-style', get_template_directory_uri() . '/inc/css/hydrus.css' );
-
-	wp_enqueue_style( 'bootstrap-style', get_template_directory_uri() . '/inc/css/bootstrap.min.css' );
 
 	wp_enqueue_script( 'hydrus-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
